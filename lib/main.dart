@@ -2,6 +2,7 @@ import 'package:custom_splash/custom_splash.dart';
 import 'package:flutter/material.dart';
 import 'package:tandoor_hut/homepage.dart';
 import 'package:tandoor_hut/login.dart';
+import 'package:tandoor_hut/orders.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
         duration: 2500,
         type: CustomSplashType.StaticDuration,
         home: LoginPage(),
-        // home: HomePage(),
+        // home: Orders(),
       ),
     );
   }

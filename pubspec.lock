@@ -147,28 +147,28 @@ packages:
       name: devtools
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.5"
+    version: "0.8.0+3"
   devtools_server:
     dependency: transitive
     description:
       name: devtools_server
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.5"
+    version: "0.8.0+3"
   devtools_shared:
     dependency: transitive
     description:
       name: devtools_shared
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.2.5"
+    version: "0.8.0+3"
   dwds:
     dependency: "direct main"
     description:
       name: dwds
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.1.0"
+    version: "6.0.0"
   fake_async:
     dependency: transitive
     description:
@@ -176,13 +176,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.1.0-nullsafety"
-  file:
-    dependency: transitive
-    description:
-      name: file
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "5.2.1"
   firebase:
     dependency: "direct main"
     description:
@@ -587,7 +580,7 @@ packages:
       name: vm_service
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.1.0"
+    version: "4.2.0"
   web_socket_channel:
     dependency: transitive
     description:
