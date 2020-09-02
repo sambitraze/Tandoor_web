@@ -12,6 +12,21 @@ class _LoginPageState extends State<LoginPage> {
   bool isLoading = false;
   TextEditingController email = TextEditingController();
   TextEditingController password = TextEditingController();
+  @override
+  void initState() {
+    FirebaseAuth.instance
+                          .signInWithEmailAndPassword(
+                              email: "tandoorhut@admin.com", password: "Tandoor@a2020")
+                          .whenComplete(() {
+                       Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) => HomePage(),
+                          ),
+                        );
+                      });
+                        
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {

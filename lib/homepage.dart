@@ -1,12 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:tandoor_hut/DeliveryStatus.dart';
 import 'package:tandoor_hut/billing.dart';
 import 'package:tandoor_hut/dashboard.dart';
 import 'package:tandoor_hut/login.dart';
 import 'package:tandoor_hut/managemenu.dart';
 import 'package:tandoor_hut/messages.dart';
 import 'package:tandoor_hut/orders.dart';
+import 'package:tandoor_hut/staff.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -14,9 +14,9 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  int _selectedIndex = 5;
+  int _selectedIndex = 4;
   PageController pageController = PageController(
-    initialPage: 5,
+    initialPage: 4,
     keepPage: true,
   );
 
@@ -121,7 +121,7 @@ class _HomePageState extends State<HomePage> {
                 icon: Icon(Icons.shopping_cart),
                 selectedIcon: Icon(Icons.shopping_cart),
                 label: Text(
-                  'Delivery Status',
+                  'Staff',
                   style: TextStyle(
                     color: Colors.white,
                   ),
@@ -149,7 +149,7 @@ class _HomePageState extends State<HomePage> {
                 Orders(),
                 Messages(),
                 ManageMenu(),
-                DeliveryStatus(),
+                Staff(),
                 Billing(),
               ],
               controller: pageController,
