@@ -14,16 +14,16 @@ class _LoginPageState extends State<LoginPage> {
   TextEditingController password = TextEditingController();
   @override
   void initState() {
-    FirebaseAuth.instance
-                          .signInWithEmailAndPassword(
-                              email: "tandoorhut@admin.com", password: "Tandoor@a2020")
-                          .whenComplete(() {
-                       Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => HomePage(),
-                          ),
-                        );
-                      });
+    // FirebaseAuth.instance
+    //                       .signInWithEmailAndPassword(
+    //                           email: "tandoorhut@admin.com", password: "Tandoor@a2020")
+    //                       .whenComplete(() {
+    //                    Navigator.of(context).push(
+    //                       MaterialPageRoute(
+    //                         builder: (context) => HomePage(),
+    //                       ),
+    //                     );
+    //                   });
                         
     super.initState();
   }
@@ -57,7 +57,8 @@ class _LoginPageState extends State<LoginPage> {
                     alignment: Alignment.topLeft,
                     child: InkWell(
                       onTap: (){
-                          Toast.show("Version 1.06", context, duration: Toast.LENGTH_SHORT, gravity:  Toast.BOTTOM);
+                          Toast.show("Version 1.9", context, duration: Toast.LENGTH_SHORT, gravity:  Toast.BOTTOM);
+                          
                       },
                       child: Text(
                         'Login',

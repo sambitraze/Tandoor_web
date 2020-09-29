@@ -21,23 +21,23 @@ class _BillingState extends State<Billing> {
   LocalKey k;
   bool sel = false;
   bool loading = false;
-  List<DropdownMenuItem> getItems = [];
   TextEditingController customer = TextEditingController();
   TextEditingController phoneNo = TextEditingController();
   TextEditingController itemName = TextEditingController();
   TextEditingController quantity = TextEditingController();
   String cashier = 'Example name';
-  List itemList = [];
-  List srlno = [];
   bool load = false;
   int srl = 1;
+  int billno = 0;
+  List<DropdownMenuItem> getItems = [];
+  List itemList = [];
+  List srlno = [];
+  List<BillItem> billitemlist = [];
+  List<BillItem> selectedbillitemlist = [];
   List<int> quant = [];
   List priceunit = [];
   List amount = [];
   List<DataRow> rowList = [];
-  int billno = 0;
-  List<BillItem> billitemlist = [];
-  List<BillItem> selectedbillitemlist = [];
 
   double itemsum = 0;
   double packing = 0;
@@ -375,6 +375,8 @@ class _BillingState extends State<Billing> {
                                             setState(
                                               () {
                                                 loading = false;
+                                                quantity.clear();
+                                                itemName.clear();
                                               },
                                             );
                                           },
@@ -418,7 +420,7 @@ class _BillingState extends State<Billing> {
                                       child: Container(
                                         color: Colors.white,
                                         child: DataTable(
-                                          columns: <DataColumn>[                                            
+                                          columns: <DataColumn>[
                                             DataColumn(
                                               label: Text(
                                                 'Item',
@@ -778,6 +780,16 @@ class _BillingState extends State<Billing> {
                                           "takeid": billno,
                                         });
                                         print('new' + billno.toString());
+                                        customer.clear();
+                                        phoneNo.clear();
+                                        itemList.clear();
+                                        srlno.clear();
+                                        selectedbillitemlist.clear();
+                                        quant.clear();
+                                        priceunit.clear();
+                                        amount.clear();
+                                        rowList.clear();
+                                        billitemlist.clear();
                                       },
                                       child: Text(
                                         'Print Bill',
