@@ -779,17 +779,17 @@ class _BillingState extends State<Billing> {
                                         billColRef.document('info').updateData({
                                           "takeid": billno,
                                         });
-                                        print('new' + billno.toString());
+                                        print('new' + billno.toString());                                        
+                                        billitemlist.clear();                                        
+                                        itemList.clear();
                                         customer.clear();
                                         phoneNo.clear();
-                                        itemList.clear();
                                         srlno.clear();
                                         selectedbillitemlist.clear();
                                         quant.clear();
                                         priceunit.clear();
                                         amount.clear();
                                         rowList.clear();
-                                        billitemlist.clear();
                                       },
                                       child: Text(
                                         'Print Bill',
