@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:tandoor_hut/homepage.dart';
 import 'package:tandoor_hut/login.dart';
 import 'package:tandoor_hut/orders.dart';
+import 'package:tandoor_hut/staff.dart';
 
 void main() {
   runApp(MyApp());
@@ -24,9 +25,9 @@ class MyApp extends StatelessWidget {
         logoSize: 150,
         duration: 2500,
         type: CustomSplashType.StaticDuration,
-        home: LoginPage(),
-        // home: Orders(),
-      ),
+        // home: LoginPage(),
+        home: Staff(),
+      ),      
     );
   }
 }

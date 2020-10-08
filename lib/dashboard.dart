@@ -9,26 +9,29 @@ class _DashBoardState extends State<DashBoard> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body:Stack(
+      body: Stack(
         children: [
           Container(
             height: double.infinity,
             width: double.infinity,
-                    child: Image.asset(
-                      'assets/dashboard.png',
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                 Container(
+            child: Image.asset(
+              'assets/dashboard.png',
+              fit: BoxFit.cover,
+            ),
+          ),
+          Container(
             height: double.infinity,
             width: double.infinity,
-                    color: Colors.white60,
-                  ), 
-                  Container(
-                    alignment: Alignment.center,
-child: Image.asset('assets/cons.png',height: 500,fit: BoxFit.cover,),
-                  )
-
+            color: Colors.white60,
+          ),
+          Container(
+            alignment: Alignment.center,
+            child: Image.asset(
+              'assets/cons.png',
+              height: 500,
+              fit: BoxFit.cover,
+            ),
+          )
         ],
       ),
     );

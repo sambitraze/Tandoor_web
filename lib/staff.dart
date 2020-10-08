@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+import 'package:pdf/widgets.dart';
 
 class Staff extends StatefulWidget {
   @override
@@ -77,6 +78,19 @@ class _StaffState extends State<Staff> {
                             ),
                           ],
                         ),
+                        Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            ttform(
+                              "Enter Name",
+                              name,
+                            ),
+                            ttform(
+                              "Enter Phone No",
+                              phone,
+                            ),
+                          ],
+                        ),
                         Center(
                           child: MaterialButton(
                             shape: RoundedRectangleBorder(
@@ -99,45 +113,50 @@ class _StaffState extends State<Staff> {
                     ),
                   ),
                 ),
+                SizedBox(
+                  height: 30,
+                ),
                 Container(
                   height: 500,
-                  child:Card( color: Colors.black,
+                  child: Card(
+                    color: Colors.black,
                     shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(15)),
                     child: StreamBuilder(
-                          stream: Firestore.instance.collection('staff').snapshots(),
-                          builder: (context, snapshot) {
-                            switch (snapshot.connectionState) {
-                              case ConnectionState.waiting:
-                                return Center(
-                                  child: CircularProgressIndicator(
-                                      backgroundColor: Colors.amber, strokeWidth: 1),
-                                );
-                              default:
-                                return ListView.builder(
-                                  itemCount: snapshot.data.documents.length,
-                                  itemBuilder: (context, index) {
-                                    return Padding(
-                                      padding: const EdgeInsets.all(12.0),
-                                      child: ListTile(
-                                        title: Text(
-                              'Name',
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 22,
-                                fontWeight: FontWeight.bold,
-                              ),
-                            ),
+                      stream:
+                          Firestore.instance.collection('staff').snapshots(),
+                      builder: (context, snapshot) {
+                        switch (snapshot.connectionState) {
+                          case ConnectionState.waiting:
+                            return Center(
+                              child: CircularProgressIndicator(
+                                  backgroundColor: Colors.amber,
+                                  strokeWidth: 1),
+                            );
+                          default:
+                            return ListView.builder(
+                              itemCount: snapshot.data.documents.length,
+                              itemBuilder: (context, index) {
+                                return Padding(
+                                  padding: const EdgeInsets.all(12.0),
+                                  child: ListTile(
+                                    title: Text(
+                                      'Name',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 22,
+                                        fontWeight: FontWeight.bold,
                                       ),
-                                    );
-                                  },
+                                    ),
+                                  ),
                                 );
-                            }
-                          },
-                        ),
+                              },
+                            );
+                        }
+                      },
+                    ),
                   ),
                 ),
-                
               ],
             ),
           )
