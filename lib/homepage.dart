@@ -6,7 +6,7 @@ import 'package:tandoor_hut/login.dart';
 import 'package:tandoor_hut/managemenu.dart';
 import 'package:tandoor_hut/messages.dart';
 import 'package:tandoor_hut/orders.dart';
-import 'package:tandoor_hut/staff.dart';
+import 'package:tandoor_hut/staffpage.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -149,7 +149,7 @@ class _HomePageState extends State<HomePage> {
                 Orders(),
                 Messages(),
                 ManageMenu(),
-                Staff(),
+                Staffpage(),
                 Billing(),
               ],
               controller: pageController,

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:tandoor_hut/homepage.dart';
 import 'package:tandoor_hut/login.dart';
 import 'package:tandoor_hut/orders.dart';
-import 'package:tandoor_hut/staff.dart';
+import 'package:tandoor_hut/staffpage.dart';
 
 void main() {
   runApp(MyApp());
@@ -26,7 +26,7 @@ class MyApp extends StatelessWidget {
         duration: 2500,
         type: CustomSplashType.StaticDuration,
         // home: LoginPage(),
-        home: Staff(),
+        home: Staffpage(),
       ),      
     );
   }
